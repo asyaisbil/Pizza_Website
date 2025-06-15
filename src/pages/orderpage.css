@@ -60,13 +60,62 @@ header img {
     opacity: 0.6;
 }
 
-.boyut {
+.secim {
     font-family: "Barlow", sans-serif;
+    padding-top: 30px;
 }
 
 .boyut-cevap {
     opacity: 0.6;
     font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.secim {
+    display: flex;
+    flex-direction: row;
+    width: 40vw;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.hamur {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-right: 150px;
+}
+
+.label {
+    font-weight: 700;
+}
+
+.malzemeler {
+    display: flex;
+    flex-direction: column;
+    font-family: "Barlow", sans-serif;
+    text-align: left;
+    width: 40vw;
+    margin: 0 auto;
+    padding: 30px;
+    gap: 15px;
+}
+
+.malzeme-baslik {
+    font-weight: 700;
+}
+
+.malzeme-info {
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.malzeme-secim {
+    opacity: 0.8;
+    font-weight: 600;
+    gap: 10px;
+    width: 30vw;
     display: flex;
     flex-direction: column;
 }
