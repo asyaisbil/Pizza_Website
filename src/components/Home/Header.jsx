@@ -1,8 +1,10 @@
 
 import React from "react";
-import { Button } from "reactstrap";
+import { Link } from "react-router-dom";
+
 
 export default function Header() {
+
     return (
         <header>
             <div style={{
@@ -14,9 +16,9 @@ export default function Header() {
             }}>
                 <img src="/../../../images/iteration-1-images/logo.svg" />
                 <h1>KOD ACIKTIRIR, PİZZA DOYURUR</h1>
-                <Button className="button">
+                <Link style={{ color: "white", fontFamily: "Barlow" }} to="/order" className="button">
                     ACIKTIM
-                </Button>
+                </Link>
             </div>
         </header>
     )

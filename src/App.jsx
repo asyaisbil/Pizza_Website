@@ -6,15 +6,28 @@ import React from 'react';
 import OrderPage from './pages/OrderPage';
 import HomePage from './pages/HomePage';
 import SuccessPage from './pages/SuccessPage';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <SuccessPage />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/order">
+            <OrderPage />
+          </Route>
+          <Route path="/success">
+            <SuccessPage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default App
+
