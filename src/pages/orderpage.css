@@ -1,0 +1,61 @@
+header {
+    background-color: #CE2829;
+    color: white;
+    width: 80vw;
+    padding: 70px;
+}
+
+header p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+header img {
+    align-self: center;
+    padding-bottom: 40px;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 50vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-buttons button {
+    all: unset;
+    cursor: pointer;
+    font-family: "Barlow", sans-serif;
+}
+
+.info {
+    font-family: "Barlow", sans-serif;
+    width: 40vw;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.info h3 {
+    text-align: left;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price p {
+    opacity: 0.5;
+}
+
+.info p {
+    text-align: left;
+    opacity: 0.6;
+}
