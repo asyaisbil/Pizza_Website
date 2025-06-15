@@ -5,13 +5,14 @@ import './App.css'
 import React from 'react';
 import OrderPage from './pages/OrderPage';
 import HomePage from './pages/HomePage';
+import SuccessPage from './pages/SuccessPage';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <HomePage />
+      <SuccessPage />
     </div>
   );
 }

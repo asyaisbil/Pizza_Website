@@ -1,0 +1,10 @@
+header {
+    background-color: #CE2829;
+    color: white;
+}
+
+h1 {
+    font-family: "Barlow", sans-serif;
+    padding: 200px;
+    letter-spacing: -5px;
+}
