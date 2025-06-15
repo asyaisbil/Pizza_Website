@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import Header from "../components/Order/Header.jsx";
 import Pizza from "../components/Order/Pizza.jsx";
+import PizzaForm from "../components/Order/PizzaForm.jsx";
 import "./orderpage.css"
 
 export default function OrderPage() {
@@ -20,6 +21,7 @@ export default function OrderPage() {
         <div>
             <Header />
             <Pizza order={order} />
+            <PizzaForm />
         </div>
     )
 }
