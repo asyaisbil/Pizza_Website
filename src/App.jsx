@@ -13,6 +13,8 @@ export default function App() {
 
   return (
     <div>
+      <OrderPage />
+      {/*
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
@@ -26,6 +28,7 @@ export default function App() {
           </Route>
         </Switch>
       </BrowserRouter>
+  */}
     </div>
   );
 }

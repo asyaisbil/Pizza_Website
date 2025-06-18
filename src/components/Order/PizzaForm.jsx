@@ -1,14 +1,50 @@
 
 import React, { useState } from "react";
 import { Form, FormGroup, Label, Input, FormText } from "reactstrap";
+import Checkbox from "./Checkbox";
 
 export default function PizzaForm() {
+    const [formData, setFormData] = useState({
+        boyut: "",
+        hamur: "",
+        malzemeler: []
+    })
 
     const malzemeler = [
         "Pepperoni", "Domates", "Biber", "Sosis", "Mısır", "Sucuk",
         "Kanada Jambonu", "Ananas", "Tavuk Izgara", "Jalepeno",
         "Soğan", "Sarımsak", "Kabak"
     ]
+
+    let newValue;
+
+    const handleChange = (event) => {
+        const { name, value, type } = event.target;
+
+        if (type === "checkbox") {
+            const oldValues = formData[name];
+
+            if (oldValues.includes(value)) {
+                newValue = oldValues.filter((v) => v !== value);
+            } else {
+                if (oldValues.length >= 10) return;
+                newValue = [...oldValues, value];
+            }
+
+
+            setFormData((prev) => ({
+                ...prev,
+                [name]: newValue
+            }));
+        } else {
+            setFormData((prev) => ({
+                ...prev,
+                [name]: value
+            }));
+        }
+    };
+
+
 
     return (
         <Form>
@@ -43,16 +79,13 @@ export default function PizzaForm() {
             <FormGroup className="malzemeler">
                 <Label className="malzeme-baslik">Ek Malzemeler</Label>
                 <FormText className="malzeme-info">En fazla 10 malzeme seçebilirsiniz. 5₺</FormText>
-                <FormGroup className="malzeme-secim">
-                    {malzemeler.map((i) => (
-                        <Label>
-                            <input type="checkbox" value={i} className="malzeme-item"
-                            />{i}
-                        </Label>
+                <div className="malzeme-secim">
+                    {malzemeler.map((item) => (
+                        <Checkbox key={item} label={item} name="malzemeler" value={item} isChecked={formData.i.includes({ value })} handleChange={handleChange} />
                     ))}
-                </FormGroup>
+                </div>
             </FormGroup>
 
-        </Form>
+        </Form >
     )
 }
